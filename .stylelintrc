@@ -1,0 +1,14 @@
+{
+  "extends": "stylelint-config-htmlacademy",
+  "ignoreFiles": ["**/normalize.css"],
+
+  "rules": {
+    "declaration-no-important": true,
+    "codeguide/indentation": [2, {
+      "ignore": ["inside-parens"]
+    }],
+    "number-max-precision": [3, {
+      "ignoreProperties": ["size-adjust"]
+    }]
+  }
+}

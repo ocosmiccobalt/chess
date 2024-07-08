@@ -1,0 +1,20 @@
+root: true
+
+parserOptions:
+  ecmaVersion: 2023
+  sourceType: module
+
+env:
+  browser: true
+  es2023: true
+
+extends:
+  "htmlacademy/vanilla"
+
+ignorePatterns:
+  - "gulpfile.js"
+
+rules:
+  quotes:
+    - error
+    - backtick
