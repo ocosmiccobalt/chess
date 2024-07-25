@@ -1,0 +1,14 @@
+:root {
+  --body-bg-color: #ffffff;
+
+  --base-text-color: #313131;
+
+  --accent-color: #f54932;
+  --special-accent-color: #3057a2;
+
+  --button-bg-color: #1f1f1f;
+  --button-state-bg-color: #fbce51;
+  --button-disabled-bg-color: #d6d6d6;
+
+  --ticker-duration: 45s;
+}
