@@ -1,0 +1,9 @@
+.page-footer {
+  flex-shrink: 0;
+}
+
+@supports (display: grid) {
+  .page-footer {
+    grid-area: footer;
+  }
+}

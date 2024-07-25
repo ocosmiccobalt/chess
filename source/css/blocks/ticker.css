@@ -1,0 +1,13 @@
+.ticker {
+  flex-shrink: 0;
+}
+
+@supports (display: grid) {
+  .ticker--top {
+    grid-area: top-ticker;
+  }
+
+  .ticker--bottom {
+    grid-area: bottom-ticker;
+  }
+}

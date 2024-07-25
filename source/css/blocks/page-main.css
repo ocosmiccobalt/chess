@@ -1,0 +1,10 @@
+.page-main {
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
+@supports (display: grid) {
+  .page-main {
+    grid-area: main;
+  }
+}

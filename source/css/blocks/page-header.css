@@ -1,0 +1,9 @@
+.page-header {
+  flex-shrink: 0;
+}
+
+@supports (display: grid) {
+  .page-header {
+    grid-area: header;
+  }
+}

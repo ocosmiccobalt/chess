@@ -1,0 +1,31 @@
+.page {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+}
+
+@supports (display: grid) {
+  .page {
+    display: grid;
+    grid-template-rows:
+      [header-start]
+      auto
+      [header-end top-ticker-start]
+      auto
+      [top-ticker-end main-start]
+      1fr
+      [main-end bottom-ticker-start]
+      auto
+      [bottom-ticker-end footer-start]
+      auto
+      [footer-end];
+    grid-template-columns:
+      [header-start top-ticker-start main-start bottom-ticker-start footer-start]
+      minmax(0, 1fr)
+      [header-end top-ticker-end main-end bottom-ticker-end footer-end];
+
+    height: auto;
+    min-height: 100%;
+  }
+}
