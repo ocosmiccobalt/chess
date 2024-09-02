@@ -1,9 +1,30 @@
 .page-footer {
   flex-shrink: 0;
+
+  background-color: var(--alt-bg-color, #e9ded4);
 }
 
 @supports (display: grid) {
   .page-footer {
     grid-area: footer;
+  }
+}
+
+.page-footer__wrapper {
+  min-height: 13.375em;
+  padding: 2.5em 5.333%;
+}
+
+.page-footer__disclaimer {
+  margin: 0;
+
+  line-height: 1.2;
+}
+
+@media (min-width: 78rem) {
+  .page-footer__wrapper {
+    min-height: 9.375em;
+    padding-left: 0.625em;
+    padding-right: 0.625em;
   }
 }
