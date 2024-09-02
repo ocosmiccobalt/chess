@@ -130,19 +130,19 @@
       <section id="about">
         <h2 class="visually-hidden">Подробнее о турнире</h2>
 
-        <section class="carousel carousel--nojs">
+        <section class="carousel carousel--nojs" data-hand-rotated>
           <div class="carousel__wrapper wrapper">
-            <div class="carousel__heading-group">
-              <h3 class="carousel__title">
-                <span class="carousel__nested">Этапы преображения </span>
-                <span class="carousel__nested">Васюков</span>
+            <div class="carousel__heading-group heading-group">
+              <h3 class="heading-group__title">
+                <span class="heading-group__nested">Этапы преображения </span>
+                <span class="heading-group__nested heading-group__nested--narrow">Васюков</span>
               </h3>
-              <p class="carousel__subtitle">Будущие источники обогащения васюкинцев</p>
+              <p class="heading-group__subtitle">Будущие источники обогащения васюкинцев</p>
             </div>
 
-            <div class="carousel__controls">
-              <button class="carousel__button carousel__button--prev" type="button" aria-label="Предыдущий слайд" aria-controls="stages-slide-list" aria-disabled="true"></button>
-              <button class="carousel__button carousel__button--next" type="button" aria-label="Следующий слайд" aria-controls="stages-slide-list"></button>
+            <div class="carousel__controls carousel__controls--stages">
+              <button class="carousel__button carousel__button--prev" type="button" aria-label="Предыдущий слайд" aria-controls="stages-carousel-list" aria-disabled="true"></button>
+              <button class="carousel__button carousel__button--next" type="button" aria-label="Следующий слайд" aria-controls="stages-carousel-list"></button>
 
               <div class="carousel__pagination" role="group" aria-label="Выберите слайд для показа">
                 <button class="carousel__bullet" type="button" aria-label="1 из 5 слайдов. Первые два этапа" aria-disabled="true" aria-current="true"></button>
@@ -154,45 +154,45 @@
               </div>
             </div>
 
-            <div class="carousel__inner">
-              <ul class="carousel__list" id="stages-slide-list" role="list">
+            <div class="carousel__inner carousel__inner--stages">
+              <ul class="carousel__list" id="stages-carousel-list" role="list">
                 <li class="carousel__item" aria-live="polite">
-                  <div class="carousel__slide" role="group" aria-label="1 из 5 слайдов. Первые два этапа">
-                    <p class="stage" data-num-1>
+                  <div class="carousel__slide stages" role="group" aria-label="1 из 5 слайдов. Первые два этапа">
+                    <p class="stages__item" data-count="1">
                       Строительство железнодорожной магистрали Москва-Васюки
                     </p>
-                    <p class="stage" data-num-2>
+                    <p class="stages__item" data-count="2">
                       Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов
                     </p>
                   </div>
                 </li>
                 <li class="carousel__item" aria-live="polite">
-                  <div class="carousel__slide" role="group" aria-label="2 из 5 слайдов. Третий этап преображения">
-                    <p class="stage" data-num-3>
+                  <div class="carousel__slide stages" role="group" aria-label="2 из 5 слайдов. Третий этап преображения">
+                    <p class="stages__item" data-count="3">
                       Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет
                     </p>
                   </div>
                 </li>
                 <li class="carousel__item" aria-live="polite">
-                  <div class="carousel__slide" role="group" aria-label="3 из 5 слайдов. Следующие два этапа">
-                    <p class="stage" data-num-4>
+                  <div class="carousel__slide stages" role="group" aria-label="3 из 5 слайдов. Следующие два этапа">
+                    <p class="stages__item" data-count="4">
                       Строительство дворца для турнира
                     </p>
-                    <p class="stage" data-num-5>
+                    <p class="stages__item" data-count="5">
                       Размещение гаражей для гостевого автотранспорта
                     </p>
                   </div>
                 </li>
                 <li class="carousel__item" aria-live="polite">
-                  <div class="carousel__slide" role="group" aria-label="4 из 5 слайдов. Шестой этап преображения">
-                    <p class="stage" data-num-6>
+                  <div class="carousel__slide stages" role="group" aria-label="4 из 5 слайдов. Шестой этап преображения">
+                    <p class="stages__item" data-count="6">
                       Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов
                     </p>
                   </div>
                 </li>
                 <li class="carousel__item" aria-live="polite">
-                  <div class="carousel__slide" role="group" aria-label="5 из 5 слайдов. Седьмой этап преображения">
-                    <p class="stage" data-num-7>
+                  <div class="carousel__slide stages stages--extra-space" role="group" aria-label="5 из 5 слайдов. Седьмой этап преображения">
+                    <p class="stages__item" data-count="7">
                       Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн
                     </p>
                   </div>
@@ -202,25 +202,25 @@
           </div>
         </section>
 
-        <section class="carousel carousel--auto carousel--nojs">
-          <div class="carousel__wrapper wrapper">
-            <div class="carousel__heading-group">
-              <h3 class="carousel__title carousel__title--block">Участники турнира</h3>
+        <section class="carousel carousel--nojs" data-auto-rotating>
+          <div class="carousel__wrapper carousel__wrapper--participants wrapper">
+            <div class="carousel__heading-group heading-group heading-group--block">
+              <h3 class="heading-group__title heading-group__title--block">Участники турнира</h3>
             </div>
 
             <div class="carousel__controls">
-              <button class="carousel__button carousel__button--prev" type="button" aria-label="Предыдущий слайд" aria-controls="participants-slide-list"></button>
-              <button class="carousel__button carousel__button--next" type="button" aria-label="Следующий слайд" aria-controls="participants-slide-list"></button>
+              <button class="carousel__button carousel__button--prev" type="button" aria-label="Предыдущий слайд" aria-controls="participants-carousel-items"></button>
+              <button class="carousel__button carousel__button--next" type="button" aria-label="Следующий слайд" aria-controls="participants-carousel-items"></button>
 
               <p class="carousel__indicator" aria-live="polite">
-                <span class="carousel__nth">1</span>/<span class="carousel__from">6</span>
+                <span class="carousel__count">1</span>/<span class="carousel__total">6</span>
               </p>
             </div>
 
             <div class="carousel__inner">
-              <ul class="carousel__list" id="participants-slide-list" role="list">
-                <li class="carousel__item" aria-live="polite">
-                  <div class="carousel__slide profile" role="group" aria-label="1 из 6 участников">
+              <div class="carousel__auto-items" id="participants-carousel-items" aria-live="off">
+                <div class="carousel__auto-item" role="group" aria-label="1 из 6 участников">
+                  <div class="profile">
                     <div class="profile__info">
                       <h4 class="profile__name">Хозе-Рауль Капабланка</h4>
                       <p class="profile__description">Чемпион мира по шахматам</p>
@@ -232,9 +232,10 @@
                       </svg>
                     </p>
                   </div>
-                </li>
-                <li class="carousel__item" aria-live="polite">
-                  <div class="carousel__slide profile" role="group" aria-label="2 из 6 участников">
+                </div>
+
+                <div class="carousel__auto-item" role="group" aria-label="2 из 6 участников">
+                  <div class="profile">
                     <div class="profile__info">
                       <h4 class="profile__name">Эммануил Ласкер</h4>
                       <p class="profile__description">Чемпион мира по шахматам</p>
@@ -246,9 +247,10 @@
                       </svg>
                     </p>
                   </div>
-                </li>
-                <li class="carousel__item" aria-live="polite">
-                  <div class="carousel__slide profile" role="group" aria-label="3 из 6 участников">
+                </div>
+
+                <div class="carousel__auto-item" role="group" aria-label="3 из 6 участников">
+                  <div class="profile">
                     <div class="profile__info">
                       <h4 class="profile__name">Александр Алехин</h4>
                       <p class="profile__description">Чемпион мира по шахматам</p>
@@ -260,9 +262,10 @@
                       </svg>
                     </p>
                   </div>
-                </li>
-                <li class="carousel__item" aria-live="polite">
-                  <div class="carousel__slide profile" role="group" aria-label="4 из 6 участников">
+                </div>
+
+                <div class="carousel__auto-item" role="group" aria-label="4 из 6 участников">
+                  <div class="profile">
                     <div class="profile__info">
                       <h4 class="profile__name">Арон Нимцович</h4>
                       <p class="profile__description">Чемпион мира по шахматам</p>
@@ -274,9 +277,10 @@
                       </svg>
                     </p>
                   </div>
-                </li>
-                <li class="carousel__item" aria-live="polite">
-                  <div class="carousel__slide profile" role="group" aria-label="5 из 6 участников">
+                </div>
+
+                <div class="carousel__auto-item" role="group" aria-label="5 из 6 участников">
+                  <div class="profile">
                     <div class="profile__info">
                       <h4 class="profile__name">Рихард Рети</h4>
                       <p class="profile__description">Чемпион мира по шахматам</p>
@@ -288,9 +292,10 @@
                       </svg>
                     </p>
                   </div>
-                </li>
-                <li class="carousel__item" aria-live="polite">
-                  <div class="carousel__slide profile" role="group" aria-label="6 из 6 участников">
+                </div>
+
+                <div class="carousel__auto-item" role="group" aria-label="6 из 6 участников">
+                  <div class="profile">
                     <div class="profile__info">
                       <h4 class="profile__name">Остап Бендер</h4>
                       <p class="profile__description">Гроссмейстер</p>
@@ -302,8 +307,8 @@
                       </svg>
                     </p>
                   </div>
-                </li>
-              </ul>
+                </div>
+              </div>
             </div>
           </div>
         </section>
