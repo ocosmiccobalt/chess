@@ -1,4 +1,5 @@
 import Carousel from './components/carousel.js';
+import AutoRotatingCarousel from './components/auto-rotating-carousel.js';
 
 function init(Component, selector, options) {
   const nodes = document.querySelectorAll(selector);
@@ -11,6 +12,7 @@ function init(Component, selector, options) {
 
 function work() {
   init(Carousel, '.carousel[data-hand-rotated]');
+  init(AutoRotatingCarousel, '.carousel[data-auto-rotating]');
 }
 
 if (document.readyState === 'loading') {
