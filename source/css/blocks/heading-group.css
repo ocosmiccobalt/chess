@@ -1,0 +1,102 @@
+.heading-group {
+  padding: 0 5.33%;
+  padding-bottom: 1.25em;
+}
+
+.heading-group--block {
+  padding-bottom: 2.5em;
+}
+
+.heading-group__title {
+  max-width: 48rem;
+  margin: 0;
+
+  font-family: "Merriweather", "Merriweather fallback", "Georgia", serif;
+  font-weight: 400;
+  font-size: 2.25em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.heading-group__subtitle {
+  max-width: 48rem;
+  margin: 0;
+  margin-top: 0.667em;
+
+  font-size: 1.125em;
+  line-height: 1.2;
+  color: var(--special-accent-color, #3057a2);
+}
+
+@media (min-width: 78rem) {
+  .heading-group {
+    padding: 0 0.625em;
+    padding-bottom: 3.375em;
+  }
+
+  .heading-group--block {
+    padding-bottom: 3.75em;
+  }
+
+  .heading-group__title {
+    max-width: none;
+
+    font-size: 3.375em;
+    line-height: 1.2;
+  }
+
+  .heading-group__subtitle {
+    max-width: none;
+
+    font-size: 1.25em;
+  }
+
+  @supports (display: grid) {
+    .heading-group {
+      display: grid;
+      grid-template-columns: repeat(9, minmax(0, 1fr));
+      grid-template-rows: repeat(2, minmax(calc(1.2 * 3.375em), auto));
+      column-gap: 1.25em;
+
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    .heading-group--block {
+      display: block;
+    }
+
+    .heading-group__title {
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+      display: grid;
+      grid-template-columns: repeat(9, minmax(0, 1fr));
+      grid-template-rows: repeat(2, minmax(1.2em, auto));
+      column-gap: 1.25rem;
+    }
+
+    .heading-group__title--block {
+      display: block;
+    }
+
+    .heading-group__nested {
+      grid-column: 1 / -1;
+      grid-row: auto;
+
+      display: block;
+    }
+
+    .heading-group__nested--narrow {
+      grid-column: 1 / 4;
+    }
+
+    .heading-group__subtitle {
+      grid-column: 4 / 7;
+      grid-row: 2;
+      align-self: center;
+
+      margin-top: 0;
+      margin-left: -0.625rem;
+    }
+  }
+}

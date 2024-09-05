@@ -2,6 +2,7 @@
 @import "./fonts.css";
 @import "./variables.css";
 @import "./scaffolding.css";
+@import "./blocks/heading-group.css";
 @import "./blocks/page-footer.css";
 @import "./blocks/page-header.css";
 @import "./blocks/page-main.css";
