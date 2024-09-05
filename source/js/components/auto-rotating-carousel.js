@@ -4,7 +4,7 @@ class AutoRotatingCarousel {
     {
       mobileStep = 1,
       layoutViewportOptions = {
-        mediaQueryString: '(min-width: 78rem)',
+        mediaQueryString: '(min-width: 64rem)',
         step: 3
       },
       paused = false,
