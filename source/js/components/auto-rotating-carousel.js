@@ -123,13 +123,14 @@ class AutoRotatingCarousel {
   updateItems(indexes) {
     for (const item of this.items) {
       item.classList.remove(this.CURRENT_ITEM_CLASS);
+      item.style.order = '0';
     }
 
-    for (const index of indexes) {
+    indexes.forEach((index, i) => {
       const item = this.items[index];
-      this.container.appendChild(item);
+      item.style.order = i;
       item.classList.add(this.CURRENT_ITEM_CLASS);
-    }
+    });
 
     this.countNode.textContent = Math.max(...indexes) + 1;
   }
