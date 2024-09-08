@@ -11,5 +11,7 @@
   --button-state-bg-color: #fbce51;
   --button-disabled-bg-color: #d6d6d6;
 
+  --info-list-border-color: #d0d0d0;
+
   --ticker-duration: 45s;
 }
