@@ -1,0 +1,227 @@
+.cta__wrapper {
+  padding-top: 3em;
+  padding-bottom: 3.75em;
+}
+
+.cta__lead {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+}
+
+.cta__inner {
+  flex-shrink: 0;
+  flex-basis: auto;
+  order: 1;
+  display: flex;
+  flex-direction: column;
+
+  max-width: 100%;
+  margin-bottom: 0.625em;
+  padding: 0 5.33%;
+}
+
+.cta__text {
+  flex-shrink: 0;
+  flex-basis: auto;
+
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+
+  font-family: "Merriweather", "Merriweather fallback", "Georgia", serif;
+  font-size: 1.75em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.cta__text b {
+  font-weight: 700;
+  color: var(--accent-color, #f54932);
+}
+
+.cta__text--nested {
+  order: 3;
+
+  padding: 0 5.33%;
+}
+
+.cta__text--nested-twice:nth-child(2) {
+  order: 1;
+}
+
+.cta__text--nested-twice:nth-child(3) {
+  order: 3;
+}
+
+.cta__illustration {
+  flex-shrink: 0;
+  flex-basis: auto;
+  align-self: center;
+
+  width: 100%;
+  max-width: 32em;
+  margin: 0 auto;
+  margin-bottom: 1.5em;
+}
+
+.cta__illustration--nested {
+  order: 2;
+}
+
+.cta__illustration--nested-twice {
+  order: 2;
+
+  border-radius: 70%;
+
+  overflow: hidden;
+}
+
+.cta__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cta__illustration--nested .cta__image {
+  margin-top: -0.813em;
+  margin-bottom: -0.313em;
+
+  aspect-ratio: 25 / 28;
+}
+
+.cta__illustration--nested-twice .cta__image {
+  aspect-ratio: 335 / 213;
+}
+
+.cta__list {
+  margin: 0;
+  padding: 0;
+}
+
+.cta__address {
+  margin: 0;
+  padding: 0 5.33%;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125em;
+  line-height: 1.2;
+  color: var(--special-accent-color, #3057a2);
+}
+
+@media (min-width: 78rem) {
+  .cta__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 5em;
+    padding-top: 5em;
+  }
+
+  .cta__header {
+    flex-shrink: 0;
+    flex-basis: auto;
+
+    max-width: 100%;
+  }
+
+  .cta__description {
+    flex-shrink: 0;
+    flex-basis: auto;
+    align-self: flex-end;
+
+    width: 58.333%;
+    min-height: 23.625em;
+    margin-left: auto;
+  }
+
+  .cta__lead {
+    flex-flow: row wrap;
+    align-items: flex-start;
+  }
+
+  .cta__inner {
+    display: block;
+
+    width: 100%;
+    min-height: 15.625em;
+    margin-bottom: 4em;
+    padding: 1.75em 0.625em;
+  }
+
+  .cta__inner::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .cta__text {
+    max-width: none;
+    margin-bottom: 0;
+
+    font-size: 2.25em;
+  }
+
+  .cta__text--nested {
+    width: 58.333%;
+    padding: 0 0.625rem;
+  }
+
+  .cta__illustration {
+    align-self: flex-start;
+
+    max-width: none;
+    margin: 0;
+  }
+
+  .cta__illustration--nested {
+    position: relative;
+
+    width: 38.164%;
+    margin-right: auto;
+  }
+
+  .cta__illustration--nested-twice {
+    float: right;
+    width: 32.242%;
+    margin-top: -1.75em;
+    margin-bottom: -1.75em;
+    margin-left: 3.273%;
+  }
+
+  .cta__illustration--nested .cta__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    margin: 0;
+
+    aspect-ratio: 530 / 609;
+  }
+
+  .cta__illustration--nested-twice .cta__image {
+    aspect-ratio: 197 / 125;
+  }
+
+  .cta__address {
+    padding: 0 0.625rem;
+
+    font-size: 1.25em;
+  }
+}
+
+@media (min-width: 85.375rem) {
+  .cta__illustration--nested .cta__image {
+    top: -2.938em;
+    right: 0.625em;
+    left: auto;
+
+    width: 102.515%;
+    max-width: 102.515%;
+  }
+
+  .cta__illustration--nested {
+    width: 41.666%;
+  }
+}
