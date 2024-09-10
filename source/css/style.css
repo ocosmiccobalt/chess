@@ -2,6 +2,7 @@
 @import "./fonts.css";
 @import "./variables.css";
 @import "./scaffolding.css";
+@import "./blocks/button.css";
 @import "./blocks/carousel.css";
 @import "./blocks/cta.css";
 @import "./blocks/heading-group.css";
