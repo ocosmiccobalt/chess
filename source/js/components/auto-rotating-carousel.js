@@ -23,7 +23,7 @@ class AutoRotatingCarousel {
     this.countNode = this.node.querySelector('.carousel__count');
     this.totalNode = this.node.querySelector('.carousel__total');
     this.container = this.node.querySelector('.carousel__auto-items');
-    this.liveRegionNode = this.node.querySelector('.carousel__auto-items');
+    this.liveRegionNode = this.container;
     this.items = [
       ...this.node.querySelectorAll('.carousel__auto-item')
     ];
