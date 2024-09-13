@@ -22,11 +22,14 @@
     <header class="page-header">
       <div class="page-header__wrapper wrapper">
         <div class="page-header__logo logo">
-          <img class="logo__image" src="img/logo.svg" fetchpriority="high" width="213" height="32" alt="Логотип Клуба четырех коней">
+          <img class="logo__image" src="img/logo.svg" width="213" height="32" alt="Логотип Клуба четырех коней">
         </div>
         <div class="page-header__intro intro">
           <h1 class="intro__title">
-            Превратите уездный город в столицу земного шара
+            <span class="intro__nested">Превратите</span>
+            <span class="intro__nested intro__nested--wide">уездный город</span>
+            <span class="intro__nested intro__nested--right">в столицу</span>
+            <span class="intro__nested intro__nested--right">земного шара</span>
           </h1>
           <p class="intro__description">
             Оплатите взнос на телеграммы для организации Международного васюкинского турнира по шахматам
@@ -34,14 +37,48 @@
           <nav class="intro__nav nav">
             <ul class="nav__list" role="list">
               <li class="nav__item">
-                <a class="nav__link button" href="#cta">Поддержать шахматную мысль</a>
+                <a class="nav__link button button--nav-link" href="#cta">Поддержать <span>шахматную мысль</span></a>
               </li>
               <li class="nav__item">
-                <a class="nav__link button button--alt" href="#about">Подробнее о турнире</a>
+                <a class="nav__link button button--nav-link button--alt" href="#about">Подробнее <span>о турнире</span></a>
               </li>
             </ul>
           </nav>
         </div>
+
+        <p class="page-header__illustration page-header__illustration--wide">
+          <picture>
+            <source type="image/avif" media="(min-width: 78rem)" srcset="img/city-collage-desktop@1x.avif 1x, img/city-collage-desktop@2x.avif 2x" width="1627" height="826">
+            <source type="image/avif" srcset="img/city-collage-mobile@1x.avif 1x, img/city-collage-mobile@2x.avif 2x" width="889" height="402">
+
+            <source type="image/webp" media="(min-width: 78rem)" srcset="img/city-collage-desktop@1x.webp 1x, img/city-collage-desktop@2x.webp 2x" width="1627" height="826">
+            <source type="image/webp" srcset="img/city-collage-mobile@1x.webp 1x, img/city-collage-mobile@2x.webp 2x" width="889" height="402">
+
+            <source media="(min-width: 78rem)" srcset="img/city-collage-desktop@1x.png 1x, img/city-collage-desktop@2x.png 2x" width="1627" height="826">
+            <img class="page-header__image" src="img/city-collage-mobile@1x.png" srcset="img/city-collage-mobile@2x.png 2x" width="889" height="402" fetchpriority="high" alt="Коллаж: высотные здания и городская набережная, суда подходят к ней по шахматной доске. На заднем плане видны большие белые шахматные фигуры. Восходит огромное солнце. Надпись: Из Васюков полетят сигналы на Марс!">
+          </picture>
+        </p>
+        <p class="page-header__illustration page-header__illustration--narrow">
+          <picture>
+            <source type="image/avif" media="(min-width: 78rem)" srcset="img/chess-knight-desktop@1x.avif 1x, img/chess-knight-desktop@2x.avif 2x" width="197" height="269">
+            <source type="image/avif" srcset="img/chess-knight-mobile@1x.avif 1x, img/chess-knight-mobile@2x.avif 2x" width="98" height="135">
+
+            <source type="image/webp" media="(min-width: 78rem)" srcset="img/chess-knight-desktop@1x.webp 1x, img/chess-knight-desktop@2x.webp 2x" width="197" height="269">
+            <source type="image/webp" srcset="img/chess-knight-mobile@1x.webp 1x, img/chess-knight-mobile@2x.webp 2x" width="98" height="135">
+
+            <source media="(min-width: 78rem)" srcset="img/chess-knight-desktop@1x.png 1x, img/chess-knight-desktop@2x.png 2x" width="197" height="269">
+            <img class="page-header__image" src="img/chess-knight-mobile@1x.png" srcset="img/chess-knight-mobile@2x.png 2x" width="98" height="135" alt="Белый шахматный конь.">
+          </picture>
+        </p>
+        <p class="page-header__illustration page-header__illustration--desktop">
+          <picture>
+            <source type="image/avif" srcset="img/pawn-desktop@1x.avif 1x, img/pawn-desktop@2x.avif 2x" width="84" height="123">
+
+            <source type="image/webp" srcset="img/pawn-desktop@1x.webp 1x, img/pawn-desktop@2x.webp 2x" width="84" height="123">
+
+            <img class="page-header__image" src="img/pawn-desktop@1x.png" srcset="img/pawn-desktop@2x.png 2x" width="84" height="123" alt="Белая пешка.">
+          </picture>
+        </p>
       </div>
     </header>
 
