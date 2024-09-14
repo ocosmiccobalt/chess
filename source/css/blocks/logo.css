@@ -1,0 +1,17 @@
+.logo {
+  width: 13.313em;
+  padding-top: 1.125em;
+}
+
+.logo__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 78rem) {
+  .logo {
+    width: 15.375em;
+    padding-top: 1.625em;
+  }
+}
