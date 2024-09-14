@@ -1,0 +1,35 @@
+.nav__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.nav__item {
+  text-align: center;
+}
+
+.nav__item + .nav__item {
+  margin-top: 0.875em;
+}
+
+@media (min-width: 78rem) {
+  .nav {
+    padding-right: 1.25em;
+  }
+
+  .nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .nav__item {
+    flex-shrink: 0;
+    flex-basis: auto;
+  }
+
+  .nav__item + .nav__item {
+    margin-top: 0;
+  }
+}
