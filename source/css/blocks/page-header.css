@@ -1,9 +1,197 @@
 .page-header {
   flex-shrink: 0;
+
+  background-color: var(--alt-bg-color, #e9ded4);
+  background-image: url("../img/header-stone-bg-mobile@1x.jpg");
+  background-position: 67.46% 0;
+  background-size: cover;
+  background-blend-mode: color-burn;
+
+  /* stylelint-disable declaration-block-no-duplicate-properties, value-no-vendor-prefix, declaration-property-value-no-unknown */
+  background-image:
+    -webkit-image-set(
+      url("../img/header-stone-bg-mobile@1x.jpg") 1x,
+      url("../img/header-stone-bg-mobile@2x.jpg") 2x
+    );
+
+  background-image:
+    image-set(
+      url("../img/header-stone-bg-mobile@1x.avif") type("image/avif") 1x,
+      url("../img/header-stone-bg-mobile@2x.avif") type("image/avif") 2x,
+      url("../img/header-stone-bg-mobile@1x.webp") type("image/webp") 1x,
+      url("../img/header-stone-bg-mobile@2x.webp") type("image/webp") 2x,
+      url("../img/header-stone-bg-mobile@1x.jpg") 1x,
+      url("../img/header-stone-bg-mobile@2x.jpg") 2x
+    );
+  /* stylelint-enable declaration-block-no-duplicate-properties, value-no-vendor-prefix, declaration-property-value-no-unknown */
+
+  overflow: hidden;
 }
 
 @supports (display: grid) {
   .page-header {
     grid-area: header;
+  }
+}
+
+.page-header__wrapper {
+  position: relative;
+}
+
+.page-header__logo {
+  position: relative;
+  z-index: 10;
+
+  margin: 0 5.33%;
+  margin-bottom: 2.5em;
+}
+
+.page-header__intro {
+  position: relative;
+  z-index: 10;
+}
+
+.page-header__illustration {
+  margin: 0;
+}
+
+.page-header__illustration--wide {
+  position: absolute;
+  bottom: -0.688em;
+  left: 50%;
+
+  width: 55.563em;
+
+  transform: translateX(-66.7%);
+  mix-blend-mode: multiply;
+}
+
+.page-header__illustration--narrow {
+  position: relative;
+  z-index: 10;
+  top: 1.25em;
+  left: 0.438em;
+
+  width: 6.125em;
+  margin: 0 auto;
+}
+
+.page-header__illustration--desktop {
+  display: none;
+}
+
+.page-header__image {
+  display: block;
+  width: 100%;
+}
+
+.page-header__illustration--wide .page-header__image {
+  aspect-ratio: 889 / 402;
+}
+
+.page-header__illustration--narrow .page-header__image {
+  aspect-ratio: 98 / 135;
+}
+
+@media (min-width: 64rem) {
+  .page-header {
+    background-image: url("../img/header-stone-bg-desktop@1x.jpg");
+    background-position: 50% 0;
+
+    /* stylelint-disable declaration-block-no-duplicate-properties, value-no-vendor-prefix, declaration-property-value-no-unknown */
+    background-image:
+      -webkit-image-set(
+        url("../img/header-stone-bg-desktop@1x.jpg") 1x,
+        url("../img/header-stone-bg-desktop@2x.jpg") 2x
+      );
+
+    background-image:
+      image-set(
+        url("../img/header-stone-bg-desktop@1x.avif") type("image/avif") 1x,
+        url("../img/header-stone-bg-desktop@2x.avif") type("image/avif") 2x,
+        url("../img/header-stone-bg-desktop@1x.webp") type("image/webp") 1x,
+        url("../img/header-stone-bg-desktop@2x.webp") type("image/webp") 2x,
+        url("../img/header-stone-bg-desktop@1x.jpg") 1x,
+        url("../img/header-stone-bg-desktop@2x.jpg") 2x
+      );
+    /* stylelint-enable declaration-block-no-duplicate-properties, value-no-vendor-prefix, declaration-property-value-no-unknown */
+  }
+}
+
+@media (min-width: 78rem) {
+  .page-header__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    padding: 0 0.625em;
+  }
+
+  .page-header__logo {
+    flex-shrink: 0;
+    flex-basis: auto;
+
+    margin-right: 75%;
+    margin-left: 0;
+    margin-bottom: 3.813em;
+  }
+
+  .page-header__intro {
+    flex-shrink: 0;
+    flex-basis: auto;
+
+    margin-bottom: 8.063em;
+  }
+
+  .page-header__illustration {
+    flex-shrink: 0;
+    flex-basis: auto;
+  }
+
+  .page-header__illustration--wide {
+    bottom: -1.438em;
+    left: -11.375em;
+
+    width: 101.688em;
+
+    transform: translateX(0);
+  }
+
+  .page-header__illustration--narrow {
+    top: 3.188em;
+    left: auto;
+
+    align-self: flex-end;
+
+    width: 12.313em;
+    margin-top: auto;
+    margin-left: 12.563em;
+  }
+
+  .page-header__illustration--desktop {
+    position: absolute;
+    bottom: 1.25em;
+    right: -1.125em;
+
+    display: block;
+    width: 5.25em;
+  }
+
+  .page-header__illustration--wide .page-header__image {
+    aspect-ratio: 1627 / 826;
+  }
+
+  .page-header__illustration--narrow .page-header__image {
+    aspect-ratio: 197 / 269;
+  }
+
+  .page-header__illustration--desktop .page-header__image {
+    aspect-ratio: 28 / 41;
+  }
+}
+
+@media (min-width: 85.375rem) {
+  .page-header {
+    background-position: -50.18% -7.625em;
   }
 }
