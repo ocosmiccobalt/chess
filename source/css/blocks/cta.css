@@ -66,7 +66,7 @@
   width: 100%;
   max-width: 32em;
   margin: 0 auto;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.563em;
 }
 
 .cta__illustration--lead {
@@ -100,12 +100,12 @@
 
 .cta__list {
   margin: 0;
-  padding: 0;
 }
 
 .cta__address {
   margin: 0;
   padding: 0 5.33%;
+  padding-bottom: 0.125rem;
 
   font-style: normal;
   font-weight: 400;
@@ -115,6 +115,10 @@
 }
 
 @media (min-width: 78rem) {
+  .cta {
+    overflow: hidden;
+  }
+
   .cta__wrapper {
     display: flex;
     flex-direction: column;
@@ -136,8 +140,9 @@
     align-self: flex-end;
 
     width: 58.333%;
-    min-height: 23.625em;
+    min-height: 23.875em;
     margin-left: auto;
+    padding: 0 0.625em;
   }
 
   .cta__lead {
@@ -150,7 +155,6 @@
     align-items: flex-start;
 
     width: 100%;
-    min-height: 15.625em;
     margin-bottom: 4em;
     padding: 0 0.625em;
   }
@@ -187,7 +191,7 @@
   .cta__illustration--lead {
     position: relative;
 
-    width: 38.164%;
+    width: 41.666%;
     margin-right: auto;
   }
 
@@ -202,8 +206,11 @@
   .cta__illustration--lead .cta__image {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0.625em;
+    left: 0.625em;
 
+    width: 96.13%;
+    max-width: 96.13%;
     margin: 0;
 
     aspect-ratio: 530 / 609;
@@ -214,7 +221,7 @@
   }
 
   .cta__address {
-    padding: 0 0.625rem;
+    padding: 0.063rem 0;
 
     font-size: 1.25em;
   }
@@ -223,14 +230,10 @@
 @media (min-width: 85.375rem) {
   .cta__illustration--lead .cta__image {
     top: -2.938em;
-    right: 0.625em;
+    right: 0.375em;
     left: auto;
 
-    width: 102.515%;
-    max-width: 102.515%;
-  }
-
-  .cta__illustration--lead {
-    width: 41.666%;
+    width: 102.316%;
+    max-width: 102.316%;
   }
 }
