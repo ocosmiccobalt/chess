@@ -42,7 +42,7 @@
 }
 
 .stages__item + .stages__item {
-  margin-top: 1.75rem;
+  margin-top: 1.875rem;
 }
 
 .stages__item::before {

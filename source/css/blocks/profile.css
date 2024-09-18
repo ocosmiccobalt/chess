@@ -57,7 +57,7 @@
   min-height: 2.188em;
   margin: 0 auto;
   margin-top: auto;
-  padding: 0.438em;
+  padding: 0.375em 0.438em 0.5em;
 
   font-weight: 500;
   line-height: 1.2;
@@ -170,6 +170,6 @@
   }
 
   .profile__image {
-    width: 18.313em;
+    width: 18.5em;
   }
 }
