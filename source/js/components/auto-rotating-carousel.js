@@ -131,7 +131,9 @@ class AutoRotatingCarousel {
       item.classList.add(this.CURRENT_ITEM_CLASS);
     }
 
-    this.countNode.textContent = Math.max(...indexes) + 1;
+    const numbers = indexes.filter((index) => !((index + 1) % this.step));
+
+    this.countNode.textContent = Math.max(...numbers) + 1;
   }
 
   showItems(indexes) {
