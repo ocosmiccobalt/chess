@@ -28,6 +28,12 @@
   color: var(--special-accent-color, #3057a2);
 }
 
+@media (min-width: 26.563rem) {
+  .heading-group__nested {
+    hyphens: none;
+  }
+}
+
 @media (min-width: 78rem) {
   .heading-group {
     padding: 0 0.625em;
