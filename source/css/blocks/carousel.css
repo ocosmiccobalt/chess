@@ -349,11 +349,11 @@
 }
 
 .carousel__auto-items--next {
-  animation: slide-in-from-end 300ms ease-in-out;
+  animation: slide-in-from-end 300ms ease;
 }
 
 .carousel__auto-items--prev {
-  animation: slide-in-from-start 300ms ease-in-out;
+  animation: slide-in-from-start 300ms ease;
 }
 
 @media (prefers-reduced-motion: reduce) {
