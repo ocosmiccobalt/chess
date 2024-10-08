@@ -9,9 +9,10 @@
     "stylelint": "stylelint \"source/css/**/*.css\"",
     "eslint": "eslint source/js/",
     "test": "npm run editorconfig && npm run stylelint && npm run eslint",
-    "build": "gulp buildProd",
-    "start": "gulp",
-    "deploy": "npm run build && gulp deploy"
+    "build:dev": "gulp --development",
+    "build:prod": "gulp --production",
+    "start": "npm run build:dev && gulp dev",
+    "deploy": "npm run build:prod && gulp deploy"
   },
   "browserslist": [
     "> 0.5%",
@@ -43,6 +44,7 @@
     "gulp": "^5.0.0",
     "gulp-csso": "^4.0.1",
     "gulp-htmlmin": "^5.0.1",
+    "gulp-mode": "^1.1.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^10.0.0",
     "gulp-posthtml": "^3.0.5",

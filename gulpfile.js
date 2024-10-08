@@ -1,11 +1,11 @@
 import gulp from "gulp";
+import mode from "gulp-mode";
 import plumber from "gulp-plumber";
 import postcss from "gulp-postcss";
 import postcssCustomProperties from "postcss-custom-properties";
 import postcssImport from "postcss-import";
 import autoprefixer from "autoprefixer";
 import sync from "browser-sync";
-const server = sync.create();
 import csso from "gulp-csso";
 import rename from "gulp-rename";
 import { deleteSync } from "del";
@@ -16,8 +16,13 @@ import htmlmin from "gulp-htmlmin";
 import webpack from "webpack-stream";
 import ghPages from "gh-pages";
 
-const webpackDevOptions = {
-  mode: "development",
+const server = sync.create();
+const isDev = Boolean(
+  mode().development() // it returns true or 0 (boolean or number)
+);
+
+const webpackOptions = {
+  mode: isDev ? "development" : "production",
   output: {
     environment: {
       arrowFunction: false
@@ -25,7 +30,7 @@ const webpackDevOptions = {
     filename: "bundle.js"
   },
   watch: false,
-  devtool: "source-map",
+  devtool: isDev ? "source-map" : false,
   module: {
     rules: [
       {
@@ -38,39 +43,7 @@ const webpackDevOptions = {
               [
                 "@babel/preset-env",
                 {
-                  debug: true,
-                  corejs: "3.37",
-                  useBuiltIns: "usage"
-                }
-              ]
-            ]
-          }
-        }
-      }
-    ]
-  }
-};
-
-const webpackProdOptions = {
-  mode: "production",
-  output: {
-    environment: {
-      arrowFunction: false
-    },
-    filename: "bundle.js"
-  },
-  module: {
-    rules: [
-      {
-        test: /\.m?js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: [
-              [
-                "@babel/preset-env",
-                {
+                  debug: isDev,
                   corejs: "3.37",
                   useBuiltIns: "usage"
                 }
@@ -85,8 +58,8 @@ const webpackProdOptions = {
 
 export function style() {
   const plugins = [
-    postcssCustomProperties(),
     postcssImport(),
+    postcssCustomProperties(),
     autoprefixer()
   ];
 
@@ -151,15 +124,9 @@ export function html() {
     .pipe(gulp.dest("build"));
 }
 
-export function jsDev() {
+export function js() {
   return gulp.src("source/js/index.js")
-    .pipe(webpack(webpackDevOptions))
-    .pipe(gulp.dest("build/js"));
-}
-
-export function jsProd() {
-  return gulp.src("source/js/index.js")
-    .pipe(webpack(webpackProdOptions))
+    .pipe(webpack(webpackOptions))
     .pipe(gulp.dest("build/js"));
 }
 
@@ -182,23 +149,17 @@ function reload(done) {
 export function watch() {
   gulp.watch("source/css/**/*.css", style);
   gulp.watch("source/*.html", gulp.series(html, reload));
-  gulp.watch("source/js/**/*.js", gulp.series(jsDev, reload));
+  gulp.watch("source/js/**/*.js", gulp.series(js, reload));
 }
+
+export const dev = gulp.parallel(
+  serve,
+  watch
+);
 
 export function deploy(done) {
   ghPages.publish("build", done);
 }
-
-export const buildProd = gulp.series(
-  clean,
-  gulp.parallel(
-    copy,
-    sprite,
-    style,
-    jsProd
-  ),
-  html
-);
 
 export default gulp.series(
   clean,
@@ -206,11 +167,7 @@ export default gulp.series(
     copy,
     sprite,
     style,
-    jsDev
+    js
   ),
-  html,
-  gulp.parallel(
-    serve,
-    watch
-  )
+  html
 );
